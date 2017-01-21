@@ -8,3 +8,4 @@ npm install --save react-router@2.0.1
 
 # Things
 * think state very carefully
+* react life cycle
