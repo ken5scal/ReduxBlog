@@ -9,3 +9,10 @@ npm install --save react-router@2.0.1
 # Things
 * think state very carefully
 * react life cycle
+
+# Making New Posts form
+* Create New Post Component
+* Add component to router
+* Implement button in post index form
+* Add actual form to the component
+* Action creator that updates reducer(Make actual data)
