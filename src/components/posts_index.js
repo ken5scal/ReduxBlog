@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // container related packages
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 import { fetchPosts } from '../actions/index';
 
 // This is actuall Container, but this app's components are mostly Container
@@ -28,4 +28,4 @@ class PostsIndex extends Component {
 // export default connect(null, mapDispatchToProps)(PostsIndex);
 
 // export default connect(null, { fetchPosts: fetchPosts })(PostsIndex);
-export default connect(null, { fetchPosts })(PostsIndex);
+export default connect(null, { fetchPosts })(PostsIndex); //ES6 syntax
