@@ -20,6 +20,7 @@ class PostsIndex extends Component {
   }
 }
 
+// Which action creators does it want to receive by props?
 // function mapDispatchToProps(dispatch) {
 //   return bindActionCreators({ fetchPosts}, dispatch);
 // }
@@ -28,4 +29,6 @@ class PostsIndex extends Component {
 // export default connect(null, mapDispatchToProps)(PostsIndex);
 
 // export default connect(null, { fetchPosts: fetchPosts })(PostsIndex);
+// 1st argument is mapStateToProsps(which we won't use).
+// 2nd argument is mapDispacthToProps
 export default connect(null, { fetchPosts })(PostsIndex); //ES6 syntax
