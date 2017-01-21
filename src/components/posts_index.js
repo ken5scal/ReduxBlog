@@ -20,9 +20,12 @@ class PostsIndex extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchPosts}, dispatch);
-}
+// function mapDispatchToProps(dispatch) {
+//   return bindActionCreators({ fetchPosts}, dispatch);
+// }
 
 // export default PostsIndex;
-export default connect(null, mapDispatchToProps)(PostsIndex);
+// export default connect(null, mapDispatchToProps)(PostsIndex);
+
+// export default connect(null, { fetchPosts: fetchPosts })(PostsIndex);
+export default connect(null, { fetchPosts })(PostsIndex);
