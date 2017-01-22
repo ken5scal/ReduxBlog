@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 import { fetchPosts } from '../actions/index';
+import { Link } from 'react-router';
 
 // This is actuall Container, but this app's components are mostly Container
 // So I will let this to sit under components
@@ -15,7 +16,14 @@ class PostsIndex extends Component {
 
   render() {
     return (
-      <div>List of blog posts</div>
+      <div>
+        <div className="text-xs-right">
+          <Link to="/posts/new" className="btn btn-primary">
+            Add a Post
+          </Link>
+        </div>
+        List of blog posts
+      </div>
     );
   }
 }
@@ -30,5 +38,5 @@ class PostsIndex extends Component {
 
 // export default connect(null, { fetchPosts: fetchPosts })(PostsIndex);
 // 1st argument is mapStateToProsps(which we won't use).
-// 2nd argument is mapDispacthToProps
+// 2nd argument is mapDispacthToProps ( props.fetchPost(): () => dispatch(fetchPost()))
 export default connect(null, { fetchPosts })(PostsIndex); //ES6 syntax
