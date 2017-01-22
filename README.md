@@ -5,6 +5,7 @@ npm install --save axios redux-promise
 * promise: unwrap actions from axios
 
 npm install --save react-router@2.0.1
+npm install --save redux-form@4.1.3
 
 # Things
 * think state very carefully
