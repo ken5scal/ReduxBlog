@@ -14,6 +14,19 @@ class PostsIndex extends Component {
     this.props.fetchPosts();
   }
 
+  renderPosts() {
+    return this.props.posts.map((post) => {
+      return (
+        <li className="list-group-item" key={post.id}>
+          <span className="pull-xs-right">
+            {post.categories}
+          </span>
+          <strong>{post.title}</strong>
+        </li>
+      )
+    })
+  }
+
   render() {
     return (
       <div>
@@ -22,10 +35,17 @@ class PostsIndex extends Component {
             Add a Post
           </Link>
         </div>
-        List of blog posts
+        <h3>Posts</h3>
+        <ul className="list-group">
+          {this.renderPosts()}
+        </ul>
       </div>
     );
   }
+}
+
+function mapStateToProsps(state) {
+  return { posts: state.posts.all };
 }
 
 // Which action creators does it want to receive by props?
@@ -39,4 +59,4 @@ class PostsIndex extends Component {
 // export default connect(null, { fetchPosts: fetchPosts })(PostsIndex);
 // 1st argument is mapStateToProsps(which we won't use).
 // 2nd argument is mapDispacthToProps ( props.fetchPost(): () => dispatch(fetchPost()))
-export default connect(null, { fetchPosts })(PostsIndex); //ES6 syntax
+export default connect(mapStateToProsps, { fetchPosts })(PostsIndex); //ES6 syntax
