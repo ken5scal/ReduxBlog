@@ -1,7 +1,7 @@
 // Reselect seelctor
 // Takes a list of posts and post IDs, and pick out
 // selected PostsReducer
-
+import _ from 'lodash';
 import { createSelector } from 'reselect';
 
 // Create select functions to pick off the pieces of state we care about
@@ -10,8 +10,9 @@ const postsSelector = state => state.posts
 const selectedPostsSelector = state => state.selectedPostIds
 
 const getPosts = (posts, selectedPostIds) => {
+  console.log(posts)
   const selectedPosts = _.filter(
-    posts,
+    posts.all,
     post => _.contains(selectedPostIds, post.id)
   );
 

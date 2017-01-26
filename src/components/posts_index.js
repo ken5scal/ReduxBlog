@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { fetchPosts } from '../actions/index';
 import { Link } from 'react-router';
 
+import SelectedPostsList from '../components/selected_posts_list';
+
 // This is actuall Container, but this app's components are mostly Container
 // So I will let this to sit under components
 class PostsIndex extends Component {
@@ -15,6 +17,7 @@ class PostsIndex extends Component {
   }
 
   renderPosts() {
+
     return this.props.posts.map((post) => {
       return (
         <li className="list-group-item" key={post.id}>
@@ -25,6 +28,7 @@ class PostsIndex extends Component {
           <strong>{post.title}</strong>
           </Link>
         </li>
+
       )
     })
   }
@@ -38,9 +42,14 @@ class PostsIndex extends Component {
           </Link>
         </div>
         <h3>Posts</h3>
+
         <ul className="list-group">
           {this.renderPosts()}
         </ul>
+
+        <h4>Selected Posts</h4>
+        <SelectedPostsList/>
+
       </div>
     );
   }
