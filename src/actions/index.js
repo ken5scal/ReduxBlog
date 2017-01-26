@@ -16,6 +16,12 @@ export function fetchPosts() {
     type: FETCH_POSTS,
     payload: request
   };
+  // Using Redux-thank
+  // return (dispatch) => {
+  //   request.then(({data}) => {
+  //     dispatch({ type: FETCH_POSTS, payload: data})
+  //   });
+  // };
 }
 
 export function createPost(props) {

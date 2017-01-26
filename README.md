@@ -17,3 +17,8 @@ npm install --save redux-form@4.1.3
 * Implement button in post index form
 * Add actual form to the component
 * Action creator that updates reducer(Make actual data)
+
+# a
+* React router: Take over the process of figuring out what components needed to be rendered on the screen
+  * By taking a look at the current url and then referencing that with our routes that we definedinside and outside js
+  * We alwasys show the component that contains all App (shows all children)
